@@ -1,0 +1,20 @@
+# Example YAML file for loading actions in simulate_fight.py
+# Save this as example_actions.yaml in your main directory
+
+actions:
+  - type: AttackAction
+    name: "Fighter A (crit 20)"
+    attack_mod: 4
+    ac: 15
+    crit_min: 20
+    die: 10
+    str_mod: 4
+    proficiency: 2
+  - type: AttackAction
+    name: "Fighter B (crit 19-20)"
+    attack_mod: 4
+    ac: 15
+    crit_min: 19
+    die: 10
+    str_mod: 4
+    proficiency: 2

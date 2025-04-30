@@ -1,0 +1,41 @@
+[project]
+name = "dnd-damage-calculator"
+version = "0.1.0"
+description = "Simulates D&D 5e combat rounds and damage."
+authors = ["Dominic <dominic0edwards@gmail.com>"]
+dependencies = [
+    "numpy",
+    "pytest",
+    "ruff"
+]
+
+[tool.black]
+line-length = 100
+skip-string-normalization = false
+
+[tool.ruff]
+line-length = 100
+exclude = [
+    ".git",
+    "__pycache__",
+    ".venv",
+    "venv",
+    "dist",
+    "build",
+]
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I"]
+ignore = []
+
+[tool.pytest.ini_options]
+minversion = "6.0"
+addopts = "-ra -q --import-mode=append"
+testpaths = ["tests"]
+
+
+[tool.mypy]
+plugins = []
+
+[tool.mypy.dnd_damage_calculator]
+ignore_missing_imports = true
